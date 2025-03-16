@@ -11,13 +11,16 @@ body {
 a {
     text-decoration: none;
 }
+.bold {
+    font-weight: 600;
+}
 
 .center {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
 }
 .header {
-    background: url(src/welcome.jpeg) center no-repeat ;
+    background: url(src/header.jpeg) center no-repeat ;
     background-size: cover;
     height: 800px;
     &__content {
@@ -53,7 +56,7 @@ a {
         border: 1px solid rgb(32, 32, 39);
         border-radius: 60px;
         background: rgb(32, 32, 39);
-        width: 247px;
+        padding: 16px 65px;
         height: 66px;
         transition: background-color .4s;
     }
@@ -140,3 +143,5 @@ a {
         
     }
 }
+
+@import 'mobile'

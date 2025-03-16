@@ -12,13 +12,17 @@ a {
   text-decoration: none;
 }
 
+.bold {
+  font-weight: 600;
+}
+
 .center {
   padding-left: calc(50% - 600px);
   padding-right: calc(50% - 600px);
 }
 
 .header {
-  background: url(src/welcome.jpeg) center no-repeat;
+  background: url(src/header.jpeg) center no-repeat;
   background-size: cover;
   height: 800px;
 }
@@ -55,7 +59,7 @@ a {
   border: 1px solid rgb(32, 32, 39);
   border-radius: 60px;
   background: rgb(32, 32, 39);
-  width: 247px;
+  padding: 16px 65px;
   height: 66px;
   transition: background-color 0.4s;
 }
@@ -139,4 +143,53 @@ a {
 }
 .game:hover {
   transform: scale(1.08);
+}
+
+@media (max-width: 375px) {
+  .center {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    background: url(src/header_mobile.jpeg) center no-repeat;
+    background-size: cover;
+  }
+  .header__content {
+    padding-top: 147px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 36px;
+  }
+  .header__heading {
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    max-width: 262px;
+  }
+  .header__description {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .header__button {
+    padding: 16px 103.5px;
+    font-size: 16px;
+  }
+  .header__button:hover {
+    background: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
+  }
+  .games {
+    display: none;
+  }
+}
+@media (min-width: 376px) and (max-width: 1024px) {
+  .center {
+    padding-left: calc(50% - 200px);
+    padding-right: calc(50% - 200px);
+  }
 }/*# sourceMappingURL=style.css.map */

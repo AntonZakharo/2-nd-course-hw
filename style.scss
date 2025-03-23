@@ -15,6 +15,7 @@ a:hover {
     background-color: #fff;
     color: black;
     cursor: pointer;
+    outline: none;
 }
 .bold {
     font-weight: 600;
@@ -54,7 +55,6 @@ a:hover {
         font-family: 'Montserrat';
         font-size: 24px;
         font-weight: 600;
-        line-height: 141.69%;
         letter-spacing: 0%;
         text-align: center;
         box-sizing: border-box;
@@ -148,7 +148,6 @@ a:hover {
     background: url(src/mini-games.jpeg) no-repeat;
     background-size: cover;
     &__heading {
-        
         color: rgb(255, 255, 255);
         font-size: 64px;
         font-weight: 700;
@@ -164,7 +163,7 @@ a:hover {
         height: 500px;
         display: flex;
         background-color: white;
-        border-radius: 48px;
+        border-radius: 30px;
         &-content {
             padding: 48px;
             width: 600px;
@@ -182,7 +181,7 @@ a:hover {
             font-size: 24px;
             font-weight: 400;
             line-height: 32px;
-            margin-bottom: 36px;
+            margin-bottom: 52px;
         }
         &-button {
             border-radius: 60px;
@@ -197,10 +196,6 @@ a:hover {
             padding: 16px 75.5px;
             border: 1px solid black;
             transition: background-color .4s;
-        }
-        &-img {
-            height: 500px;
-            width: 100%;
         }
     }
 }
@@ -218,5 +213,9 @@ a:hover {
         text-align: center;
     }
 }
+
+// .odd {
+//     align-self: flex-start;    
+// }
 
 @import 'mobile'

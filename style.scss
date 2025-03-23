@@ -11,6 +11,11 @@ body {
 a {
     text-decoration: none;
 }
+a:hover {
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+}
 .bold {
     font-weight: 600;
 }
@@ -60,18 +65,13 @@ a {
         height: 66px;
         transition: background-color .4s;
     }
-    &__button:hover {
-        background-color: #fff;
-        color: black;
-        cursor: pointer;
-    }
-
 }
 
 .games {
     background: url(src/games.jpeg) no-repeat;
     background-size: cover;
     padding-bottom: 50px;
+    border-bottom: 1px solid rgba(65, 65, 65, 0.7);
     &__heading {
         color: #fff;
         font-size: 64px;
@@ -132,7 +132,6 @@ a {
         font-weight: 700;
         line-height: 39px;
         letter-spacing: 0px;
-        text-align: left;
         max-width: 314px;
     }
     &_margin {
@@ -140,7 +139,83 @@ a {
     }
     &:hover {
         transform: scale(1.08);
+    }
+}
+
+.mini-games {
+    padding-top: 46px;
+    padding-bottom: 144px;
+    background: url(src/mini-games.jpeg) no-repeat;
+    background-size: cover;
+    &__heading {
         
+        color: rgb(255, 255, 255);
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 78px;
+    }
+    &__content {
+        margin-top: 72px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    &__card {
+        height: 500px;
+        display: flex;
+        background-color: white;
+        border-radius: 48px;
+        &-content {
+            padding: 48px;
+            width: 600px;
+        }
+        &-heading {
+            color: rgb(32, 32, 39);
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 59px;
+            margin-bottom: 24px;
+        }
+        &-description {
+            max-width: 497px;
+            color: rgb(32, 32, 39);
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            margin-bottom: 36px;
+        }
+        &-button {
+            border-radius: 60px;
+            background: rgb(32, 32, 39);
+            font-family: "Montserrat";
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 141.69%;
+            letter-spacing: 0%;
+            text-align: center;
+            padding: 16px 75.5px;
+            border: 1px solid black;
+            transition: background-color .4s;
+        }
+        &-img {
+            height: 500px;
+            width: 100%;
+        }
+    }
+}
+.footer {
+    height: 150px;
+    background: rgb(189, 237, 53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__heading {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        letter-spacing: 0px;
+        text-align: center;
     }
 }
 

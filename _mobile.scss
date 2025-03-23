@@ -1,7 +1,7 @@
 @media (max-width: 375px) {
     .center {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: calc(50% - calc(343px/2));
+        padding-right: calc(50% - calc(343px/2));
     }
     .header {
         display: flex;
@@ -21,11 +21,13 @@
             font-size: 40px;
             line-height: 49px;
             text-align: center;
+            max-width: 262px;
         }
         &__description {
             font-size: 16px;
             line-height: 20px;
             text-align: center;
+            max-width: 296px;
         }
         &__button {
             padding: 16px 103.5px;
@@ -40,6 +42,57 @@
     }
     .games {
         display: none;
+    }
+    .mini-games {
+        padding-top: 48px;
+        padding-bottom: 49px;
+        &__heading {
+            font-size: 40px;
+            line-height: 49px;
+        }
+        &__content {
+            margin-top: 48px;
+            gap: 24px;
+        }
+        &__card {
+            flex-direction: column;
+            height: auto;
+            &-content {
+                padding: 29px;
+                padding-bottom: 33px;
+                width: auto;
+            }
+            &-heading {
+                font-size: 32px;
+                line-height: 39px;
+                margin-bottom: 16px;
+            }
+            &-description {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 32px;
+                &_short-mobile {
+                    max-width: 245px;
+                }
+            }
+            &-button {
+                font-size: 16px;
+                text-align: center;
+                display: block;
+            }
+            &-img {
+                width: 343px;
+                height: 285px;
+                order: -1;
+            }
+        }
+    }
+    .footer {
+        height: 100px;
+        &__heading {
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 }
 

@@ -221,8 +221,8 @@ a:hover {
 
 @media (max-width: 375px) {
   .center {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: calc(50% - 171.5px);
+    padding-right: calc(50% - 171.5px);
   }
   .header {
     display: flex;
@@ -243,11 +243,13 @@ a:hover {
     font-size: 40px;
     line-height: 49px;
     text-align: center;
+    max-width: 262px;
   }
   .header__description {
     font-size: 16px;
     line-height: 20px;
     text-align: center;
+    max-width: 296px;
   }
   .header__button {
     padding: 16px 103.5px;
@@ -261,6 +263,57 @@ a:hover {
   }
   .games {
     display: none;
+  }
+  .mini-games {
+    padding-top: 48px;
+    padding-bottom: 49px;
+  }
+  .mini-games__heading {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .mini-games__content {
+    margin-top: 48px;
+    gap: 24px;
+  }
+  .mini-games__card {
+    flex-direction: column;
+    height: auto;
+  }
+  .mini-games__card-content {
+    padding: 29px;
+    padding-bottom: 33px;
+    width: auto;
+  }
+  .mini-games__card-heading {
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 16px;
+  }
+  .mini-games__card-description {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 32px;
+  }
+  .mini-games__card-description_short-mobile {
+    max-width: 245px;
+  }
+  .mini-games__card-button {
+    font-size: 16px;
+    text-align: center;
+    display: block;
+  }
+  .mini-games__card-img {
+    width: 343px;
+    height: 285px;
+    order: -1;
+  }
+  .footer {
+    height: 100px;
+  }
+  .footer__heading {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 @media (min-width: 376px) and (max-width: 1024px) {

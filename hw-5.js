@@ -58,26 +58,24 @@ function cube(a) {
 
 // 7
 
+function getArea() {
+    let area = Math.PI * this.radius ** 2;
+    return area;
+};
+
+function getPerimeter() {
+    let perimeter = 2 * Math.PI * this.radius;
+    return perimeter
+};
+
 circle1 = {
     radius : 12,
-    getArea() {
-        let area = Math.PI * this.radius ** 2;
-        return area;
-    },
-    getPerimeter() {
-        let perimeter = 2 * Math.PI * this.radius;
-        return perimeter
-    }
+    getArea,
+    getPerimeter
 };
 
 circle2 = {
     radius : 20,
-    getArea() {
-        let area = Math.PI * this.radius ** 2
-        return area
-    },
-    getPerimeter() {
-        let perimeter = 2 * Math.PI * this.radius;
-        return perimeter
-    }
+    getArea,
+    getPerimeter
 };

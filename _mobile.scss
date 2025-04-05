@@ -1,14 +1,14 @@
-@media (max-width: 375px) {
+@media (max-width: 450px) {
     .center {
-        padding-left: calc(50% - calc(343px/2));
-        padding-right: calc(50% - calc(343px/2));
+        padding-left: 16px;
+        padding-right: 16px;
     }
     .header {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 700px;
-        background: url(src/header_mobile.jpeg) center no-repeat;
+        background: #E1FF8F;
         background-size: cover;
         &__content {
             padding-top: 147px;
@@ -81,8 +81,6 @@
                 display: block;
             }
             &-img {
-                width: 343px;
-                height: 285px;
                 order: -1;
             }
         }
@@ -96,7 +94,7 @@
     }
 }
 
-@media (min-width: 376px) and (max-width: 1024px) {
+@media (min-width: 450px) and (max-width: 1024px) {
     .center {
         padding-left: calc(50% - 200px);
         padding-right: calc(50% - 200px);

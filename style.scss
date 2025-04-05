@@ -26,7 +26,7 @@ a:hover {
     padding-right: calc(50% - 600px);
 }
 .header {
-    background: url(src/header.jpeg) center no-repeat ;
+    background: url(src/header.jpeg) center no-repeat;
     background-size: cover;
     height: 800px;
     &__content {
@@ -104,6 +104,9 @@ a:hover {
     border-radius: 30px;
     transition: transform .4s;
     cursor: pointer;
+    &__link {
+        border-radius: 30px;
+    }
     &__img {
         height: 314px;
         width: 100%;
@@ -214,8 +217,5 @@ a:hover {
     }
 }
 
-// .odd {
-//     align-self: flex-start;    
-// }
 
 @import 'mobile'

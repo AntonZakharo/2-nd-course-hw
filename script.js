@@ -14,3 +14,62 @@ function game1() {
         if (userNumber == randomNumber) {alert('Правильно')};
     };
 };
+
+function doOperation(a, b, operator) {
+    if (operator == '-') {
+        return (a - b); 
+    } else if (operator == '+') {
+        return (a + b);
+    } else if (operator == '*') {
+        return (a * b);
+    } else if (operator == '/') {
+        return (a / b);
+    };
+};
+
+function game2() {
+    let quantity = Number(prompt('Напишите количество вопросов:'));
+
+    if (Number.isInteger(quantity)) {
+        game2Logic(quantity)
+    } else {
+        while (!Number.isInteger(quantity)) {
+            if (quantity == "") {
+                break
+            }
+            quantity = Number(prompt('Вы ввели некорректное число. \n Напишите количество вопросов:'));
+        }
+        if (quantity != "") {
+            game2Logic(quantity)
+        }
+    };
+};
+
+function game2Logic(quantity) {
+    const symbols = ['+', '-', '*', '/'];
+    let score = 0;
+    for (let i = 1; i <= quantity; i++) {
+        
+        let firstNumber = Math.floor(Math.random() * 20); 
+        let secondNumber = Math.floor(Math.random() * 20);
+        
+        let chosenSymbol = symbols[Math.floor(Math.random() * 4)];
+        if (chosenSymbol == '/' && (secondNumber > firstNumber || (secondNumber % firstNumber != 0) || secondNumber == 0)) {
+            while (secondNumber > firstNumber || (secondNumber % firstNumber != 0) || secondNumber == 0) {
+                secondNumber = Math.floor(Math.random() * 20);
+            };
+        };
+
+        let answer = doOperation(firstNumber, secondNumber, chosenSymbol);
+        let userAnswer = Number(prompt(`Вопрос ${i} \n ${firstNumber} ${chosenSymbol} ${secondNumber}`));
+        if (userAnswer == '') {
+            break
+        }
+        let result = userAnswer == answer ? 'Правильно' : 'Неправильно';
+        if (result == 'Правильно') {
+            score++;
+        };
+        alert(result);
+    };
+    alert(`Ваш результат: ${score} / ${quantity}`)
+}

@@ -11,11 +11,7 @@ for (let i=0; i < task1.length; i++ ) {
 // 2
 console.log('Задание 2');
 let task2 = [1, 5, 4, 10, 0, 3];
-task2.forEach((el, index) => {
-    if (el == 4) {
-        console.log(index);
-    };
-});
+console.log(task2.indexOf(4))
 
 // 3
 console.log('Задание 3');
@@ -46,16 +42,18 @@ console.log(task5)
 console.log('Задание 6');
 
 let task6 = [9, 8, 7, 'a', 6, 5];
-task6.sort().pop();
+
+task6 = task6.filter((item) => item !== 'a');
+task6.sort((a, b) => a - b);
 console.log(task6);
 
 // 7
-console.log('Задание 7');
+// console.log('Задание 7');
 
-let task7 = [9, 8, 7, 6, 5];
-let userNumber = prompt('Угадайте число');
+// let task7 = [9, 8, 7, 6, 5];
+// let userNumber = Number(prompt('Угадайте число'));
 
-alert(task7.includes(userNumber) ? 'Угадал' : 'Не угадал');
+// alert(task7.includes(userNumber) ? 'Угадал' : 'Не угадал');
 // 8
 console.log('Задание 8');
 
@@ -68,7 +66,7 @@ console.log('Задание 9');
 let task9 = [[1, 2, 3],[4, 5, 6]];
 let task9result = [];
 for (let i=0; i < task9.length; i++) {
-    for (let j=0; j <= task9.length; j++) {
+    for (let j=0; j < task9[i].length; j++) {
         task9result.push(task9[i][j]);
     };
 };
@@ -77,7 +75,7 @@ console.log(task9result);
 console.log('Задание 10');
 
 let task10 = [1,2,4,9,5];
-for (let i=0; i < task2.length; i++) {
+for (let i=0; i < task10.length; i++) {
     if (task10[i+1] == undefined) {
         break;
     };

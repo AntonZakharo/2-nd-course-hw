@@ -206,6 +206,12 @@ a:hover {
   border: 1px solid black;
   transition: background-color 0.4s;
 }
+.mini-games__card-button:hover {
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+  outline: none;
+}
 
 .footer {
   height: 150px;

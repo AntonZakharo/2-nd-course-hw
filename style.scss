@@ -199,6 +199,12 @@ a:hover {
             padding: 16px 75.5px;
             border: 1px solid black;
             transition: background-color .4s;
+            &:hover {
+                background-color: #fff;
+                color: black;
+                cursor: pointer;
+                outline: none;
+            }
         }
     }
 }

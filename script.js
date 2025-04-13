@@ -97,7 +97,7 @@ function game5() {
         }
     ];
     let score = 0
-    for (i=0; i < quiz.length; i++) {
+    for (let i=0; i < quiz.length; i++) {
         let question = quiz[i].question
         let options = quiz[i].options
         let correctAnswer = quiz[i].correctAnswer

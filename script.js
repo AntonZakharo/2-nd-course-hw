@@ -71,5 +71,39 @@ function game2Logic(quantity) {
         };
         alert(result);
     };
-    alert(`Ваш результат: ${score} / ${quantity}`)
+    alert(`Ваш результат: ${score} / ${quantity}`);
+};
+
+function game3() {
+    alert(`Перевернутый текст: ${prompt('Введите текст, который будет перевернут:').split('').reverse().join('')}`);
+};
+
+function game5() {
+    const quiz = [
+        {
+            question: "Какой цвет небо?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+    let score = 0
+    for (let i=0; i < quiz.length; i++) {
+        let question = quiz[i].question
+        let options = quiz[i].options
+        let correctAnswer = quiz[i].correctAnswer
+        let userAnswer = Number(prompt(`${i} вопрос\n${question}\nВарианты ответа:\n${options.join(' ')}`))
+        score += userAnswer === correctAnswer ? 1 : 0
+        alert(`${userAnswer === correctAnswer ? 'Правильно' : 'Неправильно'}\nУ вас ${score} очко/а`)
+    }
+    alert(`Ваш результат: ${score} очко/а`)
 }

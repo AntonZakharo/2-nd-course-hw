@@ -78,6 +78,53 @@ function game3() {
     alert(`Перевернутый текст: ${prompt('Введите текст, который будет перевернут:').split('').reverse().join('')}`);
 };
 
+function game4() {
+    const userChoice = prompt('Напишите ваш выбор\n Камень, ножницы или бумага?').toLowerCase();
+    const variants = ["камень", "ножницы", "бумага"];
+    const computerChoice = variants[Math.floor(Math.random() * 3)];
+    if (userChoice) {
+        if (userChoice == 'камень') {
+            switch (computerChoice) {
+                case 'камень':
+                    alert('Ничья, компьютер выбрал камень')
+                    break;
+                case 'бумага':
+                    alert('Ты проиграл! Компьютер выбрал бумагу')
+                    break;
+                case 'ножницы':
+                    alert('Ты выиграл! Компьютер выбрал ножницы')
+                    break;
+            }
+        } else if (userChoice == 'бумага') {
+            switch (computerChoice) {
+                case 'бумага':
+                    alert('Ничья, компьютер выбрал бумагу')
+                    break;
+                case 'ножницы':
+                    alert('Ты проиграл! Компьютер выбрал ножницы')
+                    break;
+                case 'камень':
+                    alert('Ты выиграл! Компьютер выбрал камень')
+                    break;
+            }
+        } else if (userChoice == 'ножницы') {
+            switch (computerChoice) {
+                case 'камень':
+                    alert('Ты проиграл!, компьютер выбрал камень')
+                    break;
+                case 'бумага':
+                    alert('Ты выиграл! Компьютер выбрал бумагу')
+                    break;
+                case 'ножницы':
+                    alert('Ничья, компьютер выбрал ножницы')
+                    break;
+            }
+        } else {
+            alert('Вы написали что-то не то')
+        }
+    };
+};
+
 function game5() {
     const quiz = [
         {

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .invisible {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Задание 1</h1>
+    <h2 class="heading1">Lorem, ipsum dolor.</h2>
+    <button class="task1">Скрыть</button>
+
+    <h1>Задание 2</h1>
+    <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, suscipit.</p>
+    <button class="task2">Изменить цвет</button>
+
+    <h1>Задание 3</h1>
+    <h1 class="heading3">Lorem, ipsum.</h1>
+    <button class="task3">Изменить текст</button>
+
+    <h1>Задание 4</h1>
+    <p class="description pa">Lorem, ipsum dolor.</p>
+    <p class="description pa">Lorem, ipsum dolor.</p>
+    <p class="description pa">Lorem, ipsum dolor.</p>
+    <p class="description pa">Lorem, ipsum dolor.</p>
+
+    <h1>Задание 5</h1>
+    <p class="description p"></p>
+    <p class="descrip p"></p>
+    <p class="description p"></p>
+    <p class="detion p"></p>
+
+    <h1>Задание 6</h1>
+    <button class="btn6">Добавить элемент</button>
+
+    <h1>Задание 7</h1>
+    <p class="description para">элемент</p>
+    <p class="descrip para">элемент</p>
+    <p class="description para">элемент</p>
+    <p class="detion para">элемент</p>
+    <button class="btn7">Удалить элемент</button>
+
+    <script>
+        // 1
+        const btn1 = document.querySelector('.task1');
+        btn1.addEventListener('click', () => {
+            const heading = document.querySelector('.heading1');
+            heading.classList.toggle('invisible');
+        });
+
+        // 2
+        const btn2 = document.querySelector('.task2');
+        btn2.addEventListener('click', () => {
+            const paragraph = document.querySelector('.p2');
+            paragraph.style.color = 'blue';  
+        });
+
+        // 3 
+        const btn3 = document.querySelector('.task3');
+        btn3.addEventListener('click', () => {
+            const heading = document.querySelector('.heading3');
+            heading.textContent = 'Привет, мир!';  
+        });
+
+        // 4
+        const descriptions = document.querySelectorAll('.pa.description');
+        descriptions.forEach(element => {
+            element.textContent = 'Измененный текст';
+        });
+
+        // 5
+        const pDesc = document.querySelectorAll('.p.description');
+        pDesc.forEach((desc) => {
+            desc.textContent = 'Новый текст';
+        })
+
+        // 6
+        const btn6 = document.querySelector('.btn6')
+        btn6.addEventListener('click', () => {
+            const newEl = document.createElement('p')
+            newEl.textContent = 'Новый абзац'
+            document.querySelector('body').appendChild(newEl)
+        })
+        // 7
+        const p7 = document.querySelector('.para.description')
+        const btn7 = document.querySelector('.btn7')
+        btn7.addEventListener('click', () => {
+            p7.remove()
+        })
+    </script>
+</body>
+</html>

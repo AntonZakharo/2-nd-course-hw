@@ -87,6 +87,8 @@ a:hover {
   background-image: url(src/scroll.jpeg);
   width: 3219px;
   height: 90px;
+  position: relative;
+  left: 50px;
   animation: slide 10s infinite normal linear;
   overflow: hidden;
 }
@@ -95,7 +97,7 @@ a:hover {
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 

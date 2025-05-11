@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -68,6 +72,31 @@ a:hover {
   padding: 16px 65px;
   height: 66px;
   transition: background-color 0.4s;
+}
+
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #BCEC30;
+  position: relative;
+  top: -90px;
+  margin-bottom: -90px;
+}
+
+.scroll {
+  background-image: url(src/scroll.jpeg);
+  width: 3219px;
+  height: 90px;
+  animation: slide 10s infinite normal linear;
+  overflow: hidden;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .games {

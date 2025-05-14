@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a.header__button:hover {
   background-color: #fff;
   color: black;
   cursor: pointer;
@@ -49,7 +49,6 @@ a:hover {
   font-size: 64px;
   font-weight: 700;
   line-height: 78px;
-  max-width: 769px;
 }
 .header__description {
   color: rgb(32, 32, 39);
@@ -70,7 +69,7 @@ a:hover {
   border-radius: 60px;
   background: rgb(32, 32, 39);
   padding: 16px 65px;
-  height: 66px;
+  display: inline-block;
   transition: background-color 0.4s;
 }
 
@@ -86,8 +85,8 @@ a:hover {
 .scroll {
   background-image: url(src/scroll.jpeg);
   width: 3219px;
-  height: 90px;
   position: relative;
+  height: 90px;
   left: 50px;
   animation: slide 10s infinite normal linear;
   overflow: hidden;
@@ -221,7 +220,7 @@ a:hover {
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
-  margin-bottom: 52px;
+  margin-bottom: 36px;
 }
 .mini-games__card-button {
   border-radius: 60px;
@@ -259,7 +258,7 @@ a:hover {
   text-align: center;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .center {
     padding-left: 16px;
     padding-right: 16px;
@@ -269,7 +268,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     height: 700px;
-    background: #E1FF8F;
+    background: url(src/header_mobile.jpeg);
     background-size: cover;
   }
   .header__content {
@@ -300,6 +299,14 @@ a:hover {
   .header__button:hover {
     background: rgb(32, 32, 39);
     color: rgb(255, 255, 255);
+  }
+  .wrapper {
+    top: -51.34px;
+    margin-bottom: -51.34px;
+  }
+  .scroll {
+    background: url(src/scroll_mobile.jpeg);
+    height: 51.34px;
   }
   .games {
     display: none;
@@ -342,6 +349,7 @@ a:hover {
     font-size: 16px;
     text-align: center;
     display: block;
+    width: 100%;
   }
   .mini-games__card-img {
     order: -1;
@@ -354,9 +362,106 @@ a:hover {
     line-height: 20px;
   }
 }
-@media (min-width: 450px) and (max-width: 1024px) {
+@media (min-width: 450px) and (max-width: 1230px) {
   .center {
-    padding-left: calc(50% - 200px);
-    padding-right: calc(50% - 200px);
+    padding-left: calc(50% - 375px);
+    padding-right: calc(50% - 375px);
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    background-position: right;
+    background-size: cover;
+  }
+  .header__content {
+    padding-top: 147px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 42px;
+  }
+  .header__heading {
+    font-size: 53px;
+    line-height: 54px;
+    max-width: 750px;
+  }
+  .header__description {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 650px;
+  }
+  .header__button {
+    font-size: 20px;
+    height: 55px;
+    display: inline-block;
+    max-width: 230px;
+  }
+  .header__button:hover {
+    background: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
+  }
+  .wrapper {
+    top: -51.34px;
+    margin-bottom: -51.34px;
+  }
+  .scroll {
+    background: url(src/scroll_mobile.jpeg);
+    height: 51.34px;
+  }
+  .games {
+    display: none;
+  }
+  .mini-games {
+    padding-top: 48px;
+    padding-bottom: 49px;
+  }
+  .mini-games__heading {
+    font-size: 52px;
+    line-height: 63px;
+  }
+  .mini-games__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 48px;
+    gap: 24px;
+  }
+  .mini-games__card {
+    flex-direction: column;
+    height: auto;
+  }
+  .mini-games__card-content {
+    padding: 29px;
+    padding-bottom: 33px;
+    width: auto;
+  }
+  .mini-games__card-heading {
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 16px;
+  }
+  .mini-games__card-description {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 32px;
+  }
+  .mini-games__card-description_short-mobile {
+    max-width: 245px;
+  }
+  .mini-games__card-button {
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+  .mini-games__card-img {
+    order: -1;
+    height: 300px;
+  }
+  .footer {
+    height: 125px;
+  }
+  .footer__heading {
+    font-size: 20px;
+    line-height: 25px;
   }
 }/*# sourceMappingURL=style.css.map */

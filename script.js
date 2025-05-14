@@ -154,3 +154,15 @@ function game5() {
     }
     alert(`Ваш результат: ${score} очко/а`)
 }
+
+function game6() {
+    const red = Math.floor(Math.random() * 256)
+    const green = Math.floor(Math.random() * 256) 
+    const blue = Math.floor(Math.random() * 256)
+    const header = document.querySelector('header')
+    const games = document.querySelector('.games')
+    const miniGames = document.querySelector('.mini-games')
+    header.style.background = `rgb(${red}, ${green}, ${blue})`
+    games.style.background = `rgb(${red}, ${green}, ${blue})`
+    miniGames.style.background = `rgb(${red}, ${green}, ${blue})`
+}

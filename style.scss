@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+
+html {
+  scroll-behavior: smooth;
+}
 * {
     padding: 0;
     margin: 0;
@@ -11,7 +15,7 @@ body {
 a {
     text-decoration: none;
 }
-a:hover {
+a.header__button:hover {
     background-color: #fff;
     color: black;
     cursor: pointer;
@@ -27,7 +31,7 @@ a:hover {
 }
 .header {
     background: url(src/header.jpeg) center no-repeat;
-    background-size: cover;
+    background-size: cover; 
     height: 800px;
     &__content {
         padding-top: 196px;
@@ -41,7 +45,6 @@ a:hover {
         font-size: 64px;
         font-weight: 700;
         line-height: 78px;
-        max-width: 769px;
     }
     &__description {
         color: rgb(32, 32, 39);
@@ -62,8 +65,34 @@ a:hover {
         border-radius: 60px;
         background: rgb(32, 32, 39);
         padding: 16px 65px;
-        height: 66px;
+        display: inline-block;
         transition: background-color .4s;
+    }
+}
+.wrapper {
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #BCEC30;
+    position: relative;
+    top: -90px;
+    margin-bottom: -90px;
+}
+.scroll {
+    background-image: url(src/scroll.jpeg);
+    width: 3219px;
+    position: relative;
+    height: 90px;
+    left: 50px;
+    animation: slide 10s infinite normal linear;
+    overflow: hidden;
+    @keyframes slide {
+        from {
+            transform: translateX(0%);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
     }
 }
 
@@ -184,7 +213,7 @@ a:hover {
             font-size: 24px;
             font-weight: 400;
             line-height: 32px;
-            margin-bottom: 52px;
+            margin-bottom: 36px;
         }
         &-button {
             border-radius: 60px;
